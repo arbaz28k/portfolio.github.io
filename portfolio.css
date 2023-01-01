@@ -1,0 +1,694 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 8, 2022, 1:38:51 AM
+    Author     : Acer
+*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+:root{
+    --yellow:#f9ca24;
+}
+*{
+    font-family: 'nunito',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    
+}
+
+*::selection{
+    background:var(--yellow);
+    color:#333;
+    
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width: 1.4rem;
+}
+
+html::webkit-scrollbar-track{
+   background:#333;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:#a9b0b0;
+}
+
+body{
+    background:#111;
+    overflow: hidden;
+    padding-left: 35rem;
+}
+
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.btn{
+    padding:.7rem 3rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    margin-top:1rem;
+    font-size: 2rem;
+    border-radius:5rem;
+}
+
+.btn i{
+    padding: 0.5rem;
+    font-size: 1.8rem;
+}
+
+.btn:hover{
+  background: #07e5f5;
+  box-shadow: 0 0 5px #07e5f5,
+              0 0 20px #07e5f5,
+              0 0 60px #07e5f5;
+}
+
+.heading{
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: 1rem solid whitesmoke;
+    border-bottom-width:5px;
+    color: #fff;
+}
+
+.heading span{
+    color: #07e5f5;
+}
+
+
+header{
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 1000;
+    height: 100%;
+    width: 35rem;
+    background:#4f5152;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .user img{
+    height: 17rem;
+    width: 17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: .6rem solid #07e5f5;
+    padding-top: 0px;
+    box-shadow: 0px 5px 7px 2px black;
+}
+
+header .user .name{
+    font-size:3.5rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+
+header .user .post{
+    margin-top: 10px;
+    font-size:2.5rem;
+    background-color:#07e5f5;
+    border-radius: 5rem;
+    font-weight:bold;
+    padding: 1rem;
+    box-shadow: 0px 2px 7px 5px black;
+}
+
+header .user .post a{
+    text-decoration: none;
+    height:10px;
+    width: 10px;
+    color:black;
+    margin: 7px;
+    padding: 5px;
+    border-radius: 50%;
+    transition: 0.4s ease-in-out;
+}
+
+header .user .post a:hover{
+    box-shadow: 0px 0px 10px 5px black;
+}
+
+header .navbar{
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+header .navbar ul li a{
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: #333;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bolder;
+    border-radius: 50%;
+} 
+
+header .navbar ul li a:hover{
+    background: #16c6c9;
+    box-shadow: 0 0 5px #16c6c9,
+                0 0 40px #16c6c9; 
+                
+}
+
+#menu{
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+.home{ 
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-flow:column;
+    padding: 0 15rem;
+}
+
+.home h3{
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.home h1{
+    font-size: 5rem;
+    color: #fff;
+}
+
+.home h1 span{
+    color: #07e5f5; 
+}
+
+.home p{
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+
+
+/******About Section Start******/
+
+.about .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:1rem 0;    
+} 
+
+.about .row .info{
+    flex:1 1 48rem;
+    padding:2rem 1rem;
+    padding-left:0.6rem;
+} 
+
+.about .row .info h3{
+    font-size: 2rem;
+    color: #07e5f5;
+    padding: 1rem 0;
+    font-weight: normal;
+} 
+
+.about .row .info h3 span{
+    color: #eee;
+    padding: 0 .5rem;
+} 
+.about .row .counter{
+    flex:1 1 48rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+} 
+
+.about .row .counter .box{
+    width: 20rem;
+    background: #222;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.about .row .counter .box span{
+    font-size: 4rem;
+    color: #07e5f5;
+}
+
+.about .row .counter .box h3{
+    font-size: 2rem;
+    color: #fff;
+}
+
+/***about section end*********/
+
+/*********************************************************/
+
+/****Education Section srart****/
+
+.education .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    padding-left: 3rem;
+}
+
+.education .box-container .box{
+    width: 27rem;
+    margin: 4rem 1rem;
+    padding-left: 4rem;
+    border-left: 0.2rem solid #fff;
+    position: relative;
+}
+
+.education .box-container .box span{
+    font-size: 1.3rem;
+    background: #222;
+    color: #fff;
+    border-radius: 5rem;
+    padding: .5rem 2.5rem;
+}
+
+.education .box-container .box h3{
+    font-size: 2rem;
+    color: #07e5f5;
+    padding-top: 1.5rem;
+}
+
+
+.education .box-container .box p{
+    font-size: 1.4rem;
+    color: #eee;
+    padding:1rem 0;
+}
+
+.education .box-container .box i{
+    position:absolute;
+    top:-1.5rem; left: -2.5rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+    background: var(--yellow);
+}
+
+
+
+
+/******************************************************************************/
+/*skills portion starts*/
+/******************************************************************************/
+#skills .container{
+ width:100%;
+ height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.skills-part{
+    width:40%;
+    margin:2rem;
+}
+
+.project-part{
+    width:40%;
+     margin:2rem;
+    
+}
+
+.subH{
+    color: white;
+    font-size:25px;
+    background-color:#333;
+    text-align: center;
+    border-radius:20px;
+    margin:10px 50px;
+}
+
+.tech-skills{
+    margin-bottom: 20px;
+}
+
+.tech-skills .bars{
+    width:fit-content;
+    margin:auto;
+    margin-bottom: 10px;
+    
+}
+
+.bars .info{
+    color: white;
+    font-size:20px;
+}
+
+
+.bars .line{
+    height:1.5rem;
+    width:20rem;
+    background-color:#b8daff;
+    border-radius:12px;
+    
+    
+}
+
+.bars .line div h2{
+    color:black;
+    font-size:12px;
+    font-weight:bolder;
+    margin-left:10rem;
+    margin-bottom:5px;
+   display: flex;
+   align-items: center;
+}
+
+.bars .line #c-indicators{
+    width: 80%;
+    height:inherit;
+    background-color:#faf02d;
+    border-radius: 20px 0px 0px 20px;
+    animation: skillindicator 1.2s ease-in;
+}
+
+@keyframes skillindicator{
+    from{
+        width:2%;
+    }
+    
+     to{
+        width:100%;
+    }
+}
+
+.bars .line #java-indicators{
+    width: 70%;
+    height:inherit;
+    background-color:#faca2d;
+    border-radius: 20px 0px 0px 20px;
+    animation: skillindicator 1.2s ease-in;
+}
+
+.bars .line #HTML-indicators{
+    width: 90%;
+    height:inherit;
+    background-color:#faf02d;
+    border-radius: 20px 0px 0px 20px;
+    animation: skillindicator 1.2s ease-in;
+}
+
+.bars .line #CSS-indicators{
+    width: 80%;
+    height:inherit;
+    background-color:#faca2d;
+    border-radius: 20px 0px 0px 20px;
+    animation: skillindicator 1.2s ease-in;
+}
+
+.bars .line #js-indicators{
+    width:70%;
+    height:inherit;
+    background-color:#faf02d;
+    border-radius: 20px 0px 0px 20px;
+    animation: skillindicator 1.2s ease-in;
+}
+
+.bars .line #bootstrap-indicators{
+    width: 60%;
+    height:inherit;
+    background-color:#faca2d;
+    border-radius: 20px 0px 0px 20px;
+    animation: skillindicator 1.2s ease-in;
+}
+
+.bars .line #SQL-indicators{
+    width: 75%;
+    height:inherit;
+    background-color:#faf02d;
+    border-radius: 20px 0px 0px 20px;
+    animation: skillindicator 1.2s ease-in;
+}
+
+
+.tech-skills .bars:nth-child(even){
+   margin-left:20px; 
+}
+
+.tech-skills .bars:nth-child(odd){
+     margin-right:20px; 
+}
+
+
+
+
+/*****soft skills**********/
+
+.soft-skills{
+    text-align:left;
+    margin:auto;
+    margin-top: 30px;
+}
+
+.soft-skills .bars{
+   padding:10px;
+}
+.soft-skills .bars .info-two{
+    color: white;
+    font-size:20px; 
+    font-weight:bold;
+    margin-left:40px;
+}
+
+.soft-skills .bars .info-two span{
+    margin-left: 20px;
+}
+
+   /* project section*/
+
+   #skills .container .project-part .row{
+    margin: 20px 15px;
+    font-size: 15px;
+    color: #eee;
+   }
+
+   #skills .container .project-part .row li{
+    margin-left: 10px;
+   }
+
+   #skills .container .project-part .row h3 a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f9ca24;
+   }
+
+
+
+/*skills portion ends*/
+
+/*************************************************************************/
+
+/*contact portion*/
+
+.contact .row{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .row .content{
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+    
+}
+
+.contact .row form{
+    flex: 1 1 45rem;
+    padding: 2rem;
+    margin: 2rem;
+    margin-bottom: 4rem;
+}
+
+.contact .row form .box{
+    padding: 1.5rem;
+    margin: 1rem;
+    background: #333;
+    color: #fff;
+    text-transform: none;
+    font-size:1.7rem;
+    width: 100%;
+}
+
+.contact .row form .box::placeholder{
+    text-transform: capitalize;
+}
+
+.contact .row form .message{
+    height: 15rem;
+    resize: none;
+}
+
+.contact .row .content .title{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.contact .row .content .info h3{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+    font-weight: normal;
+    text-transform: lowercase;
+    
+}
+
+.contact .row .content .info h3 i{
+    padding-right:1rem;
+    color: #07e5f5;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*media quaries*/
+
+@media(max-width:1200px){
+    html{
+        font-size: 55%;
+    }
+    
+    .home{
+        padding: 1rem 4rem;
+    }
+    .skills .container .left{
+        display: flex;
+        width: 100%;
+        padding: 20px;
+        margin: 10px;
+        justify-content: space-around;
+    }
+    
+    .skills .container .right{
+        width: 100%;
+         justify-content: center;
+    }
+}
+
+@media(max-width:991px){
+    
+    header{
+        left:-120%;
+    }
+    
+    #menu{
+        display: block;
+    }
+    
+    header.toggle{
+        left:0%;
+    }
+    
+    body{
+        padding: 0;
+    }
+    
+    
+    
+}
+
+@media(max-width:768px){
+    html{
+        font-size: 50%;
+    }
+      
+}
+
+
+@media(max-width:400px){
+    header{
+        width: 100vw;
+    }
+    
+    .heading{
+     margin:0 3rem;
+    }
+    
+    .about .row .counter .box{
+        width: 100%
+    }
+    
+    .education .box-container .box{
+        width: 100%;
+    }
+    
+    .skills .container .right{
+        width: 80%;
+        justify-content: center;
+        padding-right:5rem; 
+    }
+    
+    
+    .contact .row form{
+        margin: 3rem 0;
+        
+    }
+     
+}
+
